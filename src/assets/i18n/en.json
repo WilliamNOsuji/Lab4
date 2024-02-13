@@ -1,0 +1,12 @@
+{
+  "i18n":{
+    "argent": "Your money : ",
+    "parier": "Bet 5$ on this number",
+    "parierRouge": "Bet 5$ on this red",
+    "parierNoir": "Bet 5$ on this black",
+    "langueFr" : "French",
+    "langueEn" : "Anglais",
+    "roulette" : "Bilingual Roulette",
+    "message": "Dont play if your are easily woozy"
+  }
+}
