@@ -12,7 +12,10 @@ export class I18nComponent implements OnInit {
   number ?: number;
   language : string = "fr";
 
-  constructor() {}
+  constructor(public translator : TranslateService) {
+    this.translator.defaultLang = this.language;
+    this.translator.use(this.language)
+  }
 
   ngOnInit() {}
 
@@ -29,6 +32,11 @@ export class I18nComponent implements OnInit {
   jouerCouleur(color : string):void{
     this.bet = color;
     this.startGame();
+  }
+
+  switchLanguage(language: string): void {
+    this.language = language;
+    this.translator.use(language);
   }
 
   // █▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀▀█

@@ -2,26 +2,26 @@
   <div class="row">
     <div class="col-3">
       <form (ngSubmit)="jouer(number!)">
-        <div class="money">Votre argent : <span>{{money + " $"}}</span></div><br>
-        <div>Parier 5 $ sur un numéro</div>
+        <div class="money">{{ 'i18n.argent' | translate }} <span>{{money + " $"}}</span></div><br>
+        <div>{{ 'i18n.parier' | translate }}</div>
         <input type="number" name="number" [(ngModel)]="number" class="form-control" min="0" max="35" pattern="[0-9]+"><br>
       </form>
       <div class="form">
-        <button (click)="jouerCouleur('red')" class="btn btn-danger form-control">Parier 5 $ sur rouge</button><br><br>
-        <button (click)="jouerCouleur('black')" class="btn btn-dark form-control">Parier 5 $ sur noir</button><br>
+        <button (click)="jouerCouleur('red')" class="btn btn-danger form-control">{{ 'i18n.parierRouge' | translate }}</button><br><br>
+        <button (click)="jouerCouleur('black')" class="btn btn-dark form-control">{{ 'i18n.parierNoir' | translate }}</button><br>
       </div>
       <div class="form">
-        <button class="btn btn-light form-control">Français</button><br><br>
-        <button class="btn btn-light form-control">English</button><br>
+        <button (click)="switchLanguage('fr')" class="btn btn-light form-control">{{ 'i18n.langueFr' | translate }}</button><br><br>
+        <button (click)="switchLanguage('en')" class="btn btn-light form-control">{{ 'i18n.langueEn' | translate }}</button><br>
       </div>
     </div>
     <div class="col text-center">
-      <h2>Roulette bilingue</h2>
+      <h2>{{ 'i18n.roulette' | translate }}</h2>
       <div class="roulette">
         <img src="../../assets/images/ball.png" alt="Ball" id="ball" style="left:473px; top:197px;">
         <img src="../../assets/images/roulette.png" alt="Roulette" class="slot">
       </div>
-      <div id="messageRoulette">Ne pas jouer si vous êtes facilement étourdi(e)</div>
+      <div id="messageRoulette">{{ 'i18n.message' | translate }}</div>
     </div>
   </div>
 </main>
